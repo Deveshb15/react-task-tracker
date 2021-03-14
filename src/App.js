@@ -27,7 +27,7 @@ function App() {
     }
 ])
 
-// Add Task
+// Add Tasks
 const addTask = (task) => {
   console.log(task);
 }
