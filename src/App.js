@@ -8,20 +8,20 @@ function App() {
 
   const [tasks, setTasks] = useState([
     {
-        name: 'dev',
-        age: 13,
+        text: 'Write a Blog',
+        day: '14 March',
         id:1,
         reminder: true
     },
     {
-        name: 'shai',
-        age: 13,
+        text: 'Create TODO',
+        day: '14 March',
         id:2,
         reminder: true
     },
     {
-        name: 'sujo',
-        age: 13,
+        text: 'Read Sapiens',
+        day: '14 March',
         id:3,
         reminder: false
     }
