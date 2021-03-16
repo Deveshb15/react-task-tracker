@@ -1,13 +1,35 @@
 import { useState } from 'react';
 
 import Header from './Components/Header';
-import Tasks from './Components/Tasks'
-import AddTask from './Components/AddTask'
+import Tasks from './Components/Tasks';
+import AddTask from './Components/AddTask';
+import useLocalStorageReducer from './useLocalStorageState'
 
 function App() {
 
   const [showAddTask, setShowAddTask] = useState(false);
-  const [tasks, setTasks] = useState([
+//   const [tasks, setTasks] = useState([
+//     {
+//         text: 'Write a Blog',
+//         day: '14 March',
+//         id:1,
+//         reminder: true
+//     },
+//     {
+//         text: 'Create TODO',
+//         day: '14 March',
+//         id:2,
+//         reminder: true
+//     },
+//     {
+//         text: 'Read Sapiens',
+//         day: '14 March',
+//         id:3,
+//         reminder: false
+//     }
+// ])
+
+const [tasks, setTasks] = useLocalStorageReducer('tasks', [
     {
         text: 'Write a Blog',
         day: '14 March',
