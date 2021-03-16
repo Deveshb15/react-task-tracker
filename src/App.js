@@ -8,47 +8,8 @@ import useLocalStorageReducer from './useLocalStorageState'
 function App() {
 
   const [showAddTask, setShowAddTask] = useState(false);
-//   const [tasks, setTasks] = useState([
-//     {
-//         text: 'Write a Blog',
-//         day: '14 March',
-//         id:1,
-//         reminder: true
-//     },
-//     {
-//         text: 'Create TODO',
-//         day: '14 March',
-//         id:2,
-//         reminder: true
-//     },
-//     {
-//         text: 'Read Sapiens',
-//         day: '14 March',
-//         id:3,
-//         reminder: false
-//     }
-// ])
 
-const [tasks, setTasks] = useLocalStorageReducer('tasks', [
-    {
-        text: 'Write a Blog',
-        day: '14 March',
-        id:1,
-        reminder: true
-    },
-    {
-        text: 'Create TODO',
-        day: '14 March',
-        id:2,
-        reminder: true
-    },
-    {
-        text: 'Read Sapiens',
-        day: '14 March',
-        id:3,
-        reminder: false
-    }
-])
+  const [tasks, setTasks] = useLocalStorageReducer('tasks', [])
 
 // Add Tasks
 const addTask = (task) => {
@@ -75,7 +36,7 @@ const toggleReminder = (id) => {
           showAdd={showAddTask}
         />
       {showAddTask && <AddTask onAdd={addTask} />}
-      {tasks.length > 0 ? (<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />) : ('Nothing to show')}
+      {tasks.length > 0 ? (<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />) : ('Nothing to show. Add a Task.')}
     </div>
   );
 }
