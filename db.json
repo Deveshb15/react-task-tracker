@@ -4,7 +4,7 @@
       "text": "Write a Blog",
       "day": "14 March",
       "id": 1,
-      "reminder": true
+      "reminder": false
     },
     {
       "text": "Create TODO",
@@ -17,12 +17,6 @@
       "day": "14 March",
       "id": 3,
       "reminder": false
-    },
-    {
-      "text": "Write more",
-      "day": "April",
-      "reminder": false,
-      "id": 4
     }
   ]
 }
